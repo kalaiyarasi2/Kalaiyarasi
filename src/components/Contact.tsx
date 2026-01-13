@@ -102,7 +102,7 @@ export const Contact = () => {
 
       <footer className="mt-16 pt-8 border-t border-border">
         <p className="text-center text-muted-foreground text-sm">
-          © 2024 Kalaiyarasi G. Built with React, TypeScript, and Tailwind CSS.
+          © Kalaiyarasi G
         </p>
       </footer>
     </section>
