@@ -7,7 +7,7 @@ export const Experience = () => {
     {
       company: "Least Action",
       role: "AI Developer",
-      period: "September 2024 - Present",
+      period: "September 2025 - Present",
       current: true,
       achievements: [
         "Developed multiple production-grade AI agents (personal growth, sales automation, social engagement, productivity)",
