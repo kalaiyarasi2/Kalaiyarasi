@@ -4,9 +4,6 @@ import { Button } from "@/components/ui/button";
 import { ExternalLink } from "lucide-react";
 
 export const Projects = () => {
-  const REPORT_LINK =
-    "https://docs.google.com/document/d/11EwJuI6eEPbEDWHtRsO_O_cDYHNfJTI8KIMDg1B24aQ/edit";
-
   const projects = [
     {
       title: "Vertex AI ML Pipeline",
@@ -20,7 +17,23 @@ export const Projects = () => {
         "Random Forest"
       ],
       category: "Machine Learning",
-      reportLink: REPORT_LINK
+      reportLink: "https://docs.google.com/document/d/11EwJuI6eEPbEDWHtRsO_O_cDYHNfJTI8KIMDg1B24aQ/edit"
+    },
+    {
+      title: "Corrective RAG System",
+      description:
+        "Developed an intelligent Corrective RAG (CRAG) system that dynamically evaluates retrieval relevance and automatically applies hybrid retrieval when initial results are insufficient. The system combines dense semantic search (FAISS) and sparse keyword search (BM25) to improve answer accuracy and reduce hallucinations.Integrated LLM-based relevance scoring to decide when corrective retrieval is required, ensuring high-quality responses from documents.Built an end-to-end solution with a FastAPI backend and an interactive Tailwind CSS frontend for real-time question answering..",
+      technologies: [
+        "LangChain",
+        "GROQ LLM",
+        "FAISS (Vector Search)",
+        "BM25 (Sparse Retrieval)",
+        "FastAPI"
+      ],
+      category: "Generative AI",
+      reportLink: "https://docs.google.com/document/d/1l7rFalq8v9LjibUwcxdU3Jd1GO2N-fk9cof-wyHS60g/edit?usp=sharing",
+      CodeLink: "https://github.com/kalaiyarasi2/CRAG"
+
     },
     {
       title: "Multimodal RAG System",
@@ -34,7 +47,8 @@ export const Projects = () => {
         "Multimodal AI"
       ],
       category: "Generative AI",
-      reportLink: REPORT_LINK
+      reportLink: "https://docs.google.com/document/d/1aQmlqAsAv0XiByIj38jsFQDYOAT6RmgFSWwg1v3kHbo/edit?usp=sharing",
+      CodeLink: "https://github.com/kalaiyarasi2/Multimodal-Retrieval-and-Voice-Integrated-Knowledge-System"
     },
     {
       title: "Real-Time Voice Assistant (Jarvis)",
@@ -47,7 +61,8 @@ export const Projects = () => {
         "Real-time Processing"
       ],
       category: "Voice AI",
-      reportLink: REPORT_LINK
+      reportLink: "https://docs.google.com/document/d/1ophPd9ZDMLrO2FBUJ79FAcZYiT7pRgjMKHjbfA71ihE/edit?usp=sharing",
+      CodeLink: "https://github.com/kalaiyarasi2/Conversational-AI-Agent"
     },
     {
       title: "Enhanced Website Summarizer",
@@ -60,7 +75,8 @@ export const Projects = () => {
         "Web Scraping"
       ],
       category: "NLP",
-      reportLink: REPORT_LINK
+      reportLink: "https://docs.google.com/document/d/1R1ukw55G9F99_GRcKLmVvqyCbHptEEtDm94f5LNnkSY/edit?usp=sharing",
+      CodeLink: "https://github.com/kalaiyarasi2/Website-Summarizer"
     },
     {
       title: "Customer Churn Prediction",
@@ -73,7 +89,8 @@ export const Projects = () => {
         "Pandas"
       ],
       category: "Predictive Analytics",
-      reportLink: REPORT_LINK
+      reportLink: "https://docs.google.com/document/d/1liwyBIimTnBm5EnpDxjUUR4zpvtY2P6TJy0f587Jhkg/edit?usp=sharing",
+      CodeLink: "https://github.com/kalaiyarasi2/Customer-Churn-Prediction"
     },
     {
       title: "AI Document Assistant",
@@ -87,7 +104,8 @@ export const Projects = () => {
         "RAG"
       ],
       category: "Document AI",
-      reportLink: REPORT_LINK
+      reportLink: "https://docs.google.com/document/d/1fHSlKTyhEE4j25Z1iTrjwXCIqvGB5Mxt4_S9UxU9pPg/edit?usp=sharing",
+      CodeLink: "https://github.com/kalaiyarasi2/RAG-Document-Assistant"
     }
   ];
 
@@ -150,6 +168,21 @@ export const Projects = () => {
                         View Report
                       </a>
                     </Button>
+                    
+                    <Button
+                      asChild
+                      size="sm"
+                      variant="outline"
+                      className="border-primary/40 text-primary hover:bg-primary/10 w-full">
+                      <a
+                        href={project.CodeLink}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                      >
+                        <ExternalLink className="w-4 h-4 mr-2" />
+                        View Code
+                      </a>
+                      </Button>
                   </div>
                 </CardContent>
               </Card>
